@@ -4,7 +4,7 @@
 // gotoxy 함수 정의
 void gotoxy(int x, int y) {
     COORD coord;
-    coord.X = x - 1;  // 1부터 시작하는 좌표를 0부터 시작하는 좌표로 변환
+    coord.X = x - 1;  // 1부터 시작하는 좌표를 0부터 시작하는 좌표로 변환 
     coord.Y = y - 1;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord); // 커서 이동
 }
