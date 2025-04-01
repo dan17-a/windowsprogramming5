@@ -7,7 +7,7 @@ void gotoxy(int x, int y) {
     coord.X = x - 1;  // 1부터 시작하는 좌표를 0부터 시작하는 좌표로 변환 
     coord.Y = y - 1;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord); // 커서 이동
-}
+} 
 
 // 패턴 출력 함수
 void printPattern() {
