@@ -1,7 +1,4 @@
-#include <stdio.h>
-
-// PassOrFail ÇÔ¼ö: 50Á¡ ÀÌ»óÀÌ¸é 1 ¹İÈ¯, ¾Æ´Ï¸é 0 ¹İÈ¯
-int PassOrFail(int score) {
+ï»¿int PassOrFail(int score) {
     if (score >= 50) {
         return 1;
     }
@@ -13,17 +10,15 @@ int PassOrFail(int score) {
 int main() {
     int score;
 
-    printf("¿¹»ó Æò±Õ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
-    scanf_s("%d", &score);
+    printf("ì˜ˆìƒ í‰ê·  ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
+    scanf("%d", &score);
 
     if (PassOrFail(score)) {
-        printf("Àç½ÃÇè ¾ø½À´Ï´Ù!\n");
+        printf("ì¬ì‹œí—˜ ì—†ìŠµë‹ˆë‹¤!\n");          // âœ… 1ì¼ ë•Œ ì¶œë ¥
     }
     else {
-        printf("¿ì¸®´Â ¸ÁÇß´Ù¡¦  Àç½ÃÇèÀÌ´Ù¡¦\n");
+        printf("ìš°ë¦¬ëŠ” ë§í–ˆë‹¤â€¦  ì¬ì‹œí—˜ì´ë‹¤â€¦\n"); // âœ… 0ì¼ ë•Œ ì¶œë ¥
     }
 
     return 0;
 }
-
-
