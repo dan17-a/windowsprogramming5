@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="windows5.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="windows6.c">
+    <ClCompile Include="main.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

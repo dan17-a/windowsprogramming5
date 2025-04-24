@@ -20,7 +20,7 @@ struct Window {
 };
 
 // 윈도우 출력 함수
-void printWindow(struct Window win) {
+void printWindow(Window win) {
     // 내부 색상 설정
     const char* bgColor = (strcmp(win.color, "red") == 0) ? "\033[41m" : "\033[44m";
 
@@ -78,29 +78,17 @@ int main() {
     setConsoleGreenBackground(); // 콘솔 배경 초록색으로 설정
 
     // 첫 번째 (빨간색) 윈도우
-    struct Window redWindow = { 20, 7, 10, 3, "red" };
+    Window redWindow = { 20, 7, 10, 3, "red" };
     printWindow(redWindow);
 
     // 두 번째 (파란색) 윈도우
-    struct Window blueWindow = { 20, 7, 15, 5, "blue" };
+    Window blueWindow = { 20, 7, 15, 5, "blue" };
     printWindow(blueWindow);
 
-    // **왼쪽 아래 검은 점 완벽 제거**
+    // **왼쪽 아래 깨진 픽셀 완벽 제거**
     gotoxy(1, 30);
-    for (int i = 0; i < 80; i++) {  // 콘솔 가로폭(80)만큼 초록색 공백 출력
-        printf("\033[42m ");
-    }
-
-    // 초록색 배경 유지하면서 종료 메시지 내리기
-    for (int i = 0; i < 5; i++) {
-        printf("\n");
-    }
-
-    // 한 줄 개행 추가로 검은 점 방지
-    printf("\n");
-
-    // 색상 초기화
-    printf("\033[0m");
+    printf("\033[42m ");  // 초록색 공백 덮어쓰기
 
     return 0;
 }
+
